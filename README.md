@@ -8,6 +8,6 @@
 ![GAN_loss.jpg](pics/GAN_loss.png)
 ### 1.2 CGAN
 * 条件生成式对抗网络（CGAN）是对原始GAN的一个扩展，生成器和判别器都增加额外信息 y为条件, y 可以使任意信息,例如类别信息,或者其他模态的数据。网络形态为：  
-![pics/CGAN.jpg](pics/CGAN.jpg)
+![pics/CGAN.jpg](pics/CGAN.png)
 * 损失函数:  
 ![CGAN_loss.jpg](pics/CGAN_loss.png)
