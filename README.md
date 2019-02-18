@@ -7,7 +7,14 @@
 * 损失函数:  
 ![GAN_loss.jpg](pics/GAN_loss.png)
 ### 1.2  CGAN
-* 条件生成式对抗网络（CGAN）是对原始GAN的一个扩展，生成器和判别器都增加额外信息 y为条件, y 可以使任意信息,例如类别信息,或者其他模态的数据。网络形态为：  
+* 条件生成式对抗网络（CGAN）是对原始GAN的一个扩展，生成器和判别器都增加额外信息 y为条件, y 可以使任意信息,例如类别信息,或者其他模态的数据。网络结构为：  
 ![pics/CGAN.jpg](pics/CGAN.png)
 * 损失函数:  
 ![CGAN_loss.jpg](pics/CGAN_loss.png)
+### 1.3  DCGAN
+DCGAN的全称是Deep Convolutional Generative Adversarial Networks,即深度卷积对抗生成网络，它是由Alec Radford在论文Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks中提出的。它在GAN的基础上增加深度卷积网络结构，专门生成图像样本，具有以下特征：
+* 用Convolution层代替Pooling层:对于discriminator，容许网络学习自己的空间下采样;对于generator,容许网络学习自己的空间上采样。
+* 在CNN中移除了全连接层。
+* 使用batchnorm，解决初始化差的问题，并帮助梯度传播到每一层，同时防止generator把所有的样本都收敛到同一个点。但如果对所有层应用batchnorm会导致样本振荡和模型不稳定，所以对generator输出层和discriminator输入层没有使用。
+* 在generator输出层使用tanh，其余层使用ReLU。
+* 在discriminator的所有层使用Leaky ReLU。
