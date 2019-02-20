@@ -21,6 +21,6 @@ DCGAN的全称是Deep Convolutional Generative Adversarial Networks,即深度卷
 ### 1.4  EBGAN
 * EBGAN将Discriminator视作一个energy function（negative evaluation function），即这个函数值越小代表data越真实。网络结构为：
 ![EBGAN.png](pics/EBGAN.png)
-* 损失函数：
+* 损失函数：  
 ![EBGAN_dloss.png](pics/EBGAN_dloss.png)  
 ![EBGAN_gloss.png](pics/EBGAN_gloss.png)
