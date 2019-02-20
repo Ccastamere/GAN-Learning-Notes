@@ -24,3 +24,5 @@ DCGAN的全称是Deep Convolutional Generative Adversarial Networks,即深度卷
 * 损失函数：  
 ![EBGAN_dloss.png](pics/EBGAN_dloss.png)  
 ![EBGAN_gloss.png](pics/EBGAN_gloss.png)
+Pulling-away 用于训练生成器，希望它可以生成多样性的output。具体来说对于一个batch中的样本 xi 和 xj ，我们将其带入discriminator的编码器得到编码后的结果 ei 和 ej，然后比较其余弦相似度，希望这个相似性越小越好。  
+![EBGAN_PAT.png](pics/EBGAN_PAT.png)
